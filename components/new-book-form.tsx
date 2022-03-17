@@ -15,7 +15,7 @@ interface NewBookFormProps {
 }
 
 const NewBookForm = ({ onCreate, onClose }: NewBookFormProps) => {
-  const [title, setTitle] = useState<string>('')
+  const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
   const [description, setDescription] = useState('')
   const [imageUrl, setImageUrl] = useState('')
