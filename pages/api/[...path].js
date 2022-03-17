@@ -1,9 +1,9 @@
 import { createProxyMiddleware } from 'http-proxy-middleware'
 
 const apiProxy = createProxyMiddleware({
-  target: `${process.env.BOOKS_API_BASE_URL}/books`,
+  target: process.env.BOOKS_API_BASE_URL,
   changeOrigin: true,
-  pathRewrite: { [`^/api/books`]: '' },
+  pathRewrite: { [`^/api/books`]: '/books' },
   secure: false,
   onProxyReq: (proxyReq) => {
     proxyReq.setHeader('Authorization', process.env.BOOKS_API_AUTHORIZATION)
