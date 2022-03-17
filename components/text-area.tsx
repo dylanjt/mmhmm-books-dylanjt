@@ -1,7 +1,9 @@
+import React from 'react'
+
 interface TextAreaProps {
   value: string
   label?: string
-  onChange: (str: String) => void
+  onChange: React.Dispatch<React.SetStateAction<string>>
 }
 
 const TextArea = ({ value, onChange, label }: TextAreaProps) => {
