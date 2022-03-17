@@ -40,9 +40,7 @@ const Index: NextPage = () => {
         <div className="space-y-8">
           <Header
             title="Bookshelf"
-            extra={
-              <Button onClick={() => setNewBookFormVisible(!newBookFormVisible)}>Add book</Button>
-            }
+            extra={<Button onClick={() => setNewBookFormVisible(true)}>Add book</Button>}
           />
           <div className="space-y-4">
             {loading && <div>Loading...</div>}
