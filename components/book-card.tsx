@@ -19,7 +19,7 @@ const BookCard = ({ book, onRemove }: BookCardProps) => {
     setLoading(false)
 
     onRemove()
-  }, [book.id])
+  }, [book.id, onRemove])
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-4">

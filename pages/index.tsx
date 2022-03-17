@@ -48,8 +48,9 @@ const Index: NextPage = () => {
               <ErrorAlert content="An error occurred, please refresh the page to try again." />
             )}
             {!loading &&
-              books.map((book) => (
+              books.map((book, index) => (
                 <BookCard
+                  key={index}
                   book={book}
                   onRemove={() => {
                     getBooks()
