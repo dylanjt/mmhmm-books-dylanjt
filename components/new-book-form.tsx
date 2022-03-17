@@ -6,6 +6,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import Header from './header'
 import Input from './input'
 import TextArea from './text-area'
+import ErrorAlert from './error-alert'
 import Button from './button'
 
 interface NewBookFormProps {
@@ -70,11 +71,7 @@ const NewBookForm = ({ onCreate, onClose }: NewBookFormProps) => {
         </div>
       </div>
       <div className="space-y-4">
-        {error && (
-          <div className="border border-red-500 bg-red-100 p-2">
-            An error occurred, please try again.
-          </div>
-        )}
+        {error && <ErrorAlert content="An error occurred, please try again." />}
         <Button onClick={addBook} loading={loading} disabled={!isValid}>
           Save
         </Button>
